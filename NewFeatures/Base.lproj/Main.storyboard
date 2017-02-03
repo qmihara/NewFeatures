@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DXd-nw-j4h" id="rkl-hX-Jwy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKStoreReviewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GE-vI-d74">
@@ -49,7 +49,7 @@
                                         <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TDg-T7-FBT" id="OVs-ty-IHF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="itms-apps://.../?action=write_review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I89-Vt-3UQ">
@@ -71,6 +71,34 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="Iqf-gK-0Ix">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ws7-AS-Wwv">
+                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ws7-AS-Wwv" id="4fV-ij-pfz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternate Icons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZx-5c-liq">
+                                                    <rect key="frame" x="15" y="12" width="345" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aZx-5c-liq" firstAttribute="centerY" secondItem="4fV-ij-pfz" secondAttribute="centerY" id="0C5-3y-Hkm"/>
+                                                <constraint firstItem="aZx-5c-liq" firstAttribute="leading" secondItem="4fV-ij-pfz" secondAttribute="leading" constant="15" id="PsH-q8-qcF"/>
+                                                <constraint firstAttribute="trailing" secondItem="aZx-5c-liq" secondAttribute="trailing" constant="15" id="gGn-Kb-8DF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4wG-Ia-pgm" kind="show" id="lGU-Mc-38r"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="kea-Sa-TZE" id="Uiw-XD-Yik"/>
@@ -81,7 +109,44 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQC-hY-z5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="-143"/>
+            <point key="canvasLocation" x="220" y="336"/>
+        </scene>
+        <!--Alternate Icons-->
+        <scene sceneID="o1H-Ia-7Jf">
+            <objects>
+                <viewController id="4wG-Ia-pgm" customClass="AlternateIconsViewController" customModule="NewFeatures" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tOo-2m-9lQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Llj-4E-iu0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3AU-3U-81e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-VU-R8f">
+                                <rect key="frame" x="70" y="79" width="235" height="29"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Red"/>
+                                    <segment title="Green"/>
+                                    <segment title="Blue"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="4wG-Ia-pgm" eventType="valueChanged" id="0J2-qv-MyK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2sf-VU-R8f" firstAttribute="centerX" secondItem="3AU-3U-81e" secondAttribute="centerX" id="LeH-re-A7g"/>
+                            <constraint firstItem="2sf-VU-R8f" firstAttribute="top" secondItem="tOo-2m-9lQ" secondAttribute="bottom" constant="15" id="fOu-4P-aOu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alternate Icons" id="xx9-fW-XRc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tx-wp-oPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="918"/>
         </scene>
         <!--action=write-review-->
         <scene sceneID="NqA-x0-lBm">
@@ -183,7 +248,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaD-Gr-Yui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-711" y="-143"/>
+            <point key="canvasLocation" x="-673" y="336"/>
         </scene>
     </scenes>
 </document>
